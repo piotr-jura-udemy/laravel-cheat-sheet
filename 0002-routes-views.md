@@ -15,6 +15,22 @@ Route::view('/home')
 Route::view('/home', ['data' => 'value'])
 ```
 
+Route with a required parameter
+
+```
+Route::get('/page/{id}', function ($id) {
+    return view('page', ['page' => $id]);
+});
+```
+
+Route with an optional parameter
+
+```
+Route::get('/hello/{name?}', function ($name = 'Guest') {
+    return view('hello', ['name' => $name]);
+});
+```
+
 ### Inside Blade template
 Defining a section
 
