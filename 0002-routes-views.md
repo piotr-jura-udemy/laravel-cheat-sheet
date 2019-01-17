@@ -38,3 +38,19 @@ Function to render a view
 Rendering data inside a Blade template
 
 `{{ $data }}`
+
+*By default data is escaped using `htmlspecialchars`*
+
+Rendering unescaped data
+
+`{{ !! $data !! }}`
+
+Including another view
+
+`@include('view.name')`
+
+*Included view will inherit parent view data*
+
+Passing additional data to included view
+
+`@include('view.name', ['name' => 'John'])`
