@@ -1,4 +1,4 @@
-###Inside route definition file (routes/web.php)
+### Inside route definition file (routes/web.php)
 
 Defining a route using closure
 
