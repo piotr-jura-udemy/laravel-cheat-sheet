@@ -31,6 +31,22 @@ Route::get('/hello/{name?}', function ($name = 'Guest') {
 });
 ```
 
+Named route
+
+```
+Route::view('/home')->name('home');
+Route::get('/blog-post/{id}', function ($id) { return view('blog-post', ['id' => $id]); });
+```
+
+Generating url to the named route
+
+```
+$url = route('home');
+// Generates /home
+$blogPostUrl = route('blog-post', ['id' => 1]);
+// Generates /blog-post/1
+```
+
 ### Inside Blade template
 Defining a section
 
@@ -70,3 +86,9 @@ Including another view
 Passing additional data to included view
 
 `@include('view.name', ['name' => 'John'])`
+
+Generating a URL inside view
+
+```
+<a href="{{ route('home') }}">Home</a>
+```
