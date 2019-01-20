@@ -97,3 +97,20 @@ Schema::table('blogposts', function (Blueprint $table) {
 Available column types
 
 Refer to this link [https://laravel.com/docs/5.7/migrations#columns](https://laravel.com/docs/5.7/migrations#columns)
+
+Typical columns types
+
+| Command                           | Description                                              |
+| --------                          |-------------                                             |
+| `$table->increments('id');`       | Auto-incrementing UNSIGNED INTEGER                       |
+| `$table->string('title', 100);`   | VARCHAR with optional length                             |
+| `$table->timestamps();`           | Nullable TIMESTAMP `created_at` and `updated_at` columns |
+| `$table->text('content');`        | TEXT                                                     |
+
+Column modifiers
+
+`->default('value')` - the default column value
+
+`->nullable()` - column can be NULL
+
+`->unsigned()` - integer is unsigned (no negative values)
