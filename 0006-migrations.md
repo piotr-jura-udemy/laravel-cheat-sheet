@@ -37,3 +37,63 @@ Setting the length of the field
 $table->string('email', 191);
 
 ```
+
+### Writing migrations
+
+Creating a new migration
+
+```
+php artisan make:migration create_blogposts_table
+```
+
+To prefill the migration with stub code that creates a new table
+
+```
+php artisan make:migration create_blogposts_table --create=blogposts
+```
+
+To prefill the migration with stub code that modifies an existing table
+
+
+```
+php artisan make:migration add_date_to_blogposts_table --table=blogposts
+```
+
+### The migration file
+
+Migration file containts a class with 2 methods, `up()` and `down()`
+
+The `up()` methods creates new table, modifies the existing one. Generally, it specifies how your database schema should change from now on - this might include deleting fields or tables.
+
+The `down()` method specifies how to revert changes made my migration.
+
+`up()` method is called when you run `php artisan migrate`
+
+`down()` method is called when you run `php artisan migrate:rollback`
+
+Creating a new table
+
+```
+Schema::create('blogposts', function (Blueprint $table) {
+    $table->increments('id');
+});
+```
+
+Renaming an existing table
+
+```
+Schema::rename('blogposts', 'posts');
+
+```
+
+Creating columns
+
+```
+Schema::table('blogposts', function (Blueprint $table) {
+    $table->string('title');
+});
+```
+
+Available column types
+
+Refer to this link [https://laravel.com/docs/5.7/migrations#columns](https://laravel.com/docs/5.7/migrations#columns)
