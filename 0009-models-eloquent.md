@@ -41,10 +41,11 @@ php artisan make:model BlogPost -m
 
 By convention, Laravel assumes the table name is "snake case" plural model name. For example:
 
-| Model name                           | Table name                                              |
-| --------                          |-------------                                             |
-| BlogPost       | blog_posts                                                                   
-| Blogpost		| blogposts
+| Model name      | Table name        |                    
+| --------        |-------------      |                              
+| BlogPost       | `blog_posts`         |                                                          
+| Blogpost		 | `blogposts`			  |
+| VeryLongTrain  | `very_long_trains`   |
 
 To define a custom name, add (override) the protected `$table` model property
 
