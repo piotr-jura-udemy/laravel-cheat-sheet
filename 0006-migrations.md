@@ -4,7 +4,7 @@ The limit for keys is 767 bytes.
 
 In the `utf-8` encoding, the single character is 3 bytes, so key on `VARCHAR(255)` length won't exceed 767 (3 * 255 = 765).
 
-In you are using utf8mb4, which we are, the single character is 4 bytes. Thus the maximum length for VARCHAR which has key on it (like `UNIQUE`) is 191.
+In you are using `utf8mb4`, which we are, the single character is 4 bytes. Thus the maximum length for `VARCHAR` which has key on it (like `UNIQUE`) is 191.
 
 When you encounter this:
 
@@ -35,7 +35,6 @@ Setting the length of the field
 
 ```
 $table->string('email', 191);
-
 ```
 
 ### Writing migrations
