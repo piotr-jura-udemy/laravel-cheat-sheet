@@ -35,13 +35,13 @@ Resource methods table
 
 |Verb	|URI	|Action	|Route Name |
 |---   |---  |---      |---   |---	|
-|GET	|/posts	|index	|posts.index
-|GET	|/posts/create	|create	| posts.create
-|POST	|/posts	|store	|posts.store
-|GET	|/posts/{photo}	|show	|posts.show
-|GET	|/posts/{photo}/edit	|edit	|posts.edit
-|PUT/PATCH	|/posts/{photo}	|update	|posts.update
-|DELETE	|/posts/{photo}	|destroy	|posts.destroy
+|GET	|/posts	|index	|posts.index |
+|GET	|/posts/create	|create	| posts.create |
+|POST	|/posts	|store	|posts.store |
+|GET	|/posts/{photo}	|show	|posts.show |
+|GET	|/posts/{photo}/edit	|edit	|posts.edit |
+|PUT/PATCH	|/posts/{photo}	|update	|posts.update |
+|DELETE	|/posts/{photo}	|destroy	|posts.destroy |
 
 To enable only certain routes
 
