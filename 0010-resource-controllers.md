@@ -34,7 +34,7 @@ Generating a new resource controller with all the resource methods
 Resource methods table
 
 |Verb	|URI	|Action	|Route Name |
-|---   |---  |---      |---   |---	|
+|--------   |--------  |--------      |--------   |--------	|
 |GET	|/posts	|index	|posts.index |
 |GET	|/posts/create	|create	| posts.create |
 |POST	|/posts	|store	|posts.store |
