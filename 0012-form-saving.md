@@ -63,7 +63,7 @@ class BeforeMiddleware
 		// Do something here before the request is handled by Controller/Closure...
 		
 		// Calling $next with $request parameter
-       return $next($request);
+		return $next($request);
     }
 }
 ```
