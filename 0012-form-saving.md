@@ -114,16 +114,34 @@ if ($request->has('title')) {
 
 ### Redirects
 
-Redirect to a route
+Redirect to a URL
 
 ```
-return redirect('posts.index');
+return redirect('/posts');
 ```
 
 Redirect to a route with "flashed input"
 
 ```
-return redirect('form')->withInput();
+return redirect('/posts/create')->withInput();
+```
+
+Redirect to last URL with "flashed input"
+
+```
+return back()->withInput();
+```
+
+Redirect to a named route
+
+```
+return redirect()->route('posts.index');
+```
+
+Redirect with flash message
+
+```
+return redirect()->route('posts')->with('status', 'New post created!');
 ```
 
 #### Flashing input
