@@ -9,3 +9,4 @@
 7. [Blade @foreach, @if and Dates (Carbon)](./0011-views-collections-dates.md)
 8. [Forms, CSRF, Request, Middleware, Redirects](./0012-form-saving.md)
 9. [Deleting Models, Soft Deletes](./0024-deleting.md)
+10. [Assets, JavaScript, Styles](./0026-assets.md)
