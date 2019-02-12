@@ -10,3 +10,4 @@
 8. [Forms, CSRF, Request, Middleware, Redirects](./0012-form-saving.md)
 9. [Deleting Models, Soft Deletes](./0024-deleting.md)
 10. [Assets, JavaScript, Styles](./0026-assets.md)
+11. [Testing basics](./0028-testing.md)
