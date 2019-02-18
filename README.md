@@ -11,3 +11,5 @@
 9. [Deleting Models, Soft Deletes](./0024-deleting.md)
 10. [Assets, JavaScript, Styles](./0026-assets.md)
 11. [Testing basics](./0028-testing.md)
+
+1. [One to One relations](./0036-one-to-one.md)
