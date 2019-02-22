@@ -75,6 +75,9 @@ use App\Author;
 
 $author = Author::find(1);   // Load author model
 $profile = $author->profile; // Load the relation (separate query is made)
+
+$profile = Profile::find(1);
+$author = $profile->author;
 ```
 
 The `method` name defining a relation is accessed as a `field` with the same name as the `method` name.
@@ -102,5 +105,5 @@ return $this->whereKey($id)->first($columns);
 ```
 use App\Author;
 
-$author = Author::with(['profile', 'account'])->where(1)->get();
+$author = Author::with(['profile', 'account'])->whereKey(1)->get();
 ```
