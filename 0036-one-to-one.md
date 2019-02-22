@@ -46,7 +46,7 @@ Schema::create('profiles', function (Blueprint $table) {
     $table->increments('id');
     $table->timestamps();
 
-    $table->unsignedInteger('author_id');
+    $table->unsignedInteger('author_id')->unique();
     $table->foreign('author_id')->references('id')->on('authors');
 });
 ```        
@@ -107,3 +107,44 @@ use App\Author;
 
 $author = Author::with(['profile', 'account'])->whereKey(1)->get();
 ```
+
+#### Creating association
+
+```
+$author = new Author();
+$author->save();
+
+$profile = new Profile();
+
+$author->profile()->save($profile);
+```
+
+Notes:
+
+- You can't save `Profile` model before `author_id` column is assigned with the valid `id` of `Author`
+- That means, you can't use `Profile::create()` as it immediately saves the model, unless you pass the `author_id` like `Profile::create(['author_id' => 1]);`
+- The latter can only be used, when `author_id` is on the `$fillable` list of the `Profile` model
+
+```
+$profile = new Profile();
+$author = Author::create();
+
+$profile->author()->associate($author)->save();
+```
+
+Or
+
+```
+$profile = new Profile(); // Create model instance
+$profile->author_id = 1; // Create relationship
+$profile->save(); // Save model
+```
+
+Or
+
+```
+// Create new model with relationship and save
+$profile = Profile::create(['author_id' => 1]);
+```
+
+In the end, creating the association is basically assigning the `author_id` column of the `Profile` model (`profiles` table record).
