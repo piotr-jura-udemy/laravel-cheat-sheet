@@ -40,7 +40,7 @@ Relation on `Comment` model:
 ```
 class Comment extends Model
 {
-    public function post()
+    public function blogPost()
     {
         return $this->belongsTo('App\BlogPost');
     }
