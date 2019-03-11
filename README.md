@@ -16,8 +16,8 @@
 
 ## Database Relations
 
-12. [One to One relations](./0036-one-to-one.md)
-13. [One to Many relations](./0039-one-to-many.md)
+1. [One to One relations](./0036-one-to-one.md)
+2. [One to Many relations](./0039-one-to-many.md)
 
 ## Authentication
 
