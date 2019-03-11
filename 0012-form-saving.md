@@ -28,6 +28,8 @@ Middleware is a mechanism that filter requests going through your application.
 
 Simply put - each middleware is a chunk of code that runs BEFORE or AFTER the request is handled by `Controller Action` or a `Closure`.
 
+Below is an example flow of the request going through your application:
+
 ![Request flow with middleware](./middleware.png)
 
 An example AFTER middleware from [Laravel Docs](https://laravel.com/docs/5.7/middleware#defining-middleware)
@@ -71,6 +73,12 @@ class BeforeMiddleware
 ```
 
 Middleware should call the passed `Closure` `$next` with the `$request` parameter to allow further processing, or `throw` an `Exception` or do a redirect to stop further processing of the `Request`.
+
+Middleware examples:
+
+* Authentication (veryfying if user is authenticated)
+* CSRF protection
+* CORS middleware
 
 ### Request
 
