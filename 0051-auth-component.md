@@ -4,7 +4,7 @@
 
 Below is a diagram of Laravel Authentication component:
 
-![](./auth-components.png)
+![Authentication components](./auth-components.png)
 
 The main component responsible for authenticating users is called **Guard**.
 
@@ -26,3 +26,9 @@ Laravel has some sensible defaults configured out of the box. There are 2 guards
 * **api** (for APIs, stateless - no session is kept between request, each request needs to include a valid token to authenticate user)
 
 The default Laravel guard is **web**.
+
+### Default login flow
+
+Below is the diagram of how logging in works by default:
+
+![Login flow](./login-flow.png)
