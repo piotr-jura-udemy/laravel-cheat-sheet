@@ -1,5 +1,7 @@
 # Laravel Cheat Sheet
 
+## Laravel basics (routes, controllers, views, forms, testing)
+
 1. [Routes, Views and Layout](./0002-routes-views.md)
 2. [Controllers](./0004-controllers.md)
 3. [Configuring Database](./0005-database.md)
@@ -12,5 +14,11 @@
 10. [Assets, JavaScript, Styles](./0026-assets.md)
 11. [Testing basics](./0028-testing.md)
 
-1. [One to One relations](./0036-one-to-one.md)
-2. [One to Many relations](./0039-one-to-many.md)
+## Database Relations
+
+12. [One to One relations](./0036-one-to-one.md)
+13. [One to Many relations](./0039-one-to-many.md)
+
+## Authentication
+
+1. [Authentication components](./0051-auth-component.md)
