@@ -28,6 +28,8 @@ Middleware is a mechanism that filter requests going through your application.
 
 Simply put - each middleware is a chunk of code that runs BEFORE or AFTER the request is handled by `Controller Action` or a `Closure`.
 
+![Request flow with middleware](./middleware.png)
+
 An example AFTER middleware from [Laravel Docs](https://laravel.com/docs/5.7/middleware#defining-middleware)
 
 ```
