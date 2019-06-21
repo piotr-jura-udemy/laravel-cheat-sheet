@@ -75,7 +75,7 @@ Rendering data inside a Blade template
 
 Rendering unescaped data
 
-`{{ !! $data !! }}`
+`{!! $data !!}`
 
 Including another view
 
