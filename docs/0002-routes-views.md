@@ -1,3 +1,9 @@
+### How routing works (diagram)
+![Routing diagram](./../resources/img/Laravel-Routes.png)
+
+### HTTP verb methods on Route class (diagram)
+![Routing diagram](./../resources/img/Laravel-Route-HTTP-Verbs.png)
+
 ### Inside route definition file (routes/web.php)
 
 Defining a route using closure
