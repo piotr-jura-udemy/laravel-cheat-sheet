@@ -21,6 +21,9 @@ Route with a required parameter
 Route::get('/page/{id}', function ($id) {
     return view('page', ['page' => $id]);
 });
+
+// Since PHP 7.4 Arrow Functions
+Route::get('/page/{id}', fn ($id) => view('page', ['page' => $id]));
 ```
 
 Route with an optional parameter
