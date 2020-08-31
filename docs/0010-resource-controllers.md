@@ -1,8 +1,8 @@
 ### Controllers
 
-Import the Model class for easier usage
+You can import the model class in your controller
 
-```
+```php
 use App\BlogPost
 // Now it can be used like this
 BlogPost::all();
@@ -10,19 +10,19 @@ BlogPost::all();
 \App\BlogPost::all();
 ```
 
-Group code by responsibility, separate controllers for 2 simple static pages (HomeController), another for displaying blog posts (PostController).
-
 #### Resource Controllers
 
-Use (per) resource controllers
+If you think about a single resource, like photo - resource controllers let you organize all controller logic around that resource easily
 
-```
+Using resource controllers
+
+```php
 Route::resource('posts', 'PostController');
 ```
 
-Instead of
+Instead of manually specifying routes
 
-```
+```php
 Route::get('/posts', 'PostController@index')->name('blog.index');
 Route::get('/posts/{id}', 'PostController@show')->name('blog.show');
 ```
@@ -45,13 +45,13 @@ Resource methods table
 
 To enable only certain routes
 
-```
+```php
 Route::resource('posts', 'PostController')->only(['index', 'show']);
 ```
 
 To disable specific routes
 
-```
+```php
 Route::resource('posts', 'PostController')->except(['create', 'store', 'edit', 'update', 'destroy]);
 ```
 
@@ -67,7 +67,7 @@ To display a 404 Not Found page when model cannot be found, use `BlogPost::findO
 
 Those 2 examples are equivalent
 
-```
+```php
 PostController extends Controller {
 	public function show($post) {
 		return view('post.show', ['post' => BlogPost::findOrFail($id)]);
@@ -76,7 +76,7 @@ PostController extends Controller {
 ```
 Above, we manually try to fetch the BlogPost model. `findOrFail` will show a 404 page if model is not found.
 
-```
+```php
 PostController extends Controller {
 	public function show(BlogPost $post) {
 		return view('post.show', ['post' => $post]);
@@ -85,9 +85,9 @@ PostController extends Controller {
 ```
 Above we use **Route Model Binding**. If the method parameter name matches the route segment, eg. route is `/posts/{post}` the variable name has to be `$post`. Then `type hinting` (specyfying the argument type) as the Eloquent model `BlogPost`, tells Laravel to try and fetch this object by `id`.
 
-To customize the property by which the model is fetched, add the `getRouteKeyName()` method to the model.
+To customize the property by which the model is fetched (using **Route Model Binding**!), add the `getRouteKeyName()` method to the model.
 
-```
+```php
 public function getRouteKeyName()
 {
     return 'slug';
