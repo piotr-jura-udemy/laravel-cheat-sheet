@@ -20,4 +20,4 @@ Visit [http://localhost/phpmyadmin](http://localhost/phpmyadmin) if you are usin
 
 Create a new database
 
-![Creating database in phpMyAdmin](./0005-create-database.gif)
+![Creating database in phpMyAdmin](./../resources/0005-create-database.gif)

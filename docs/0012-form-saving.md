@@ -30,7 +30,7 @@ Simply put - each middleware is a chunk of code that runs BEFORE or AFTER the re
 
 Below is an example flow of the request going through your application:
 
-![Request flow with middleware](./middleware.png)
+![Request flow with middleware](./../resources/img/middleware.png)
 
 An example AFTER middleware from [Laravel Docs](https://laravel.com/docs/5.7/middleware#defining-middleware)
 

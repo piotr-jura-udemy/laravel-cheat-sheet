@@ -2,11 +2,11 @@
 
 An example one-to-many relation diagram:
 
-![Graph](./one-to-many.png)
+![Graph](./../resources/img/one-to-many.png)
 
 ## Database design
 
-![](./one-to-many-database.png)
+![](./../resources/img/one-to-many-database.png)
 
 With one-to-many relation, 1 record from first table (eg. `blog_posts`) has zero or more matching records on the other table (eg. `comments`).
 

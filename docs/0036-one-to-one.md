@@ -2,11 +2,11 @@
 
 An example one-to-one relation diagram:
 
-![Graph](./one-to-one.png)
+![Graph](./../resources/img/one-to-one.png)
 
 ## Database design
 
-![](./one-to-one-database.png)
+![](./../resources/img/one-to-one-database.png)
 
 With one-to-one relation, 1 record from first table (eg. `authors`) has exactly 1 matching record on the other table (eg. `profiles`).
 
