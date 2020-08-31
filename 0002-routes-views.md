@@ -22,7 +22,7 @@ Route::get('/page/{id}', function ($id) {
     return view('page', ['page' => $id]);
 });
 
-// Since PHP 7.4 Arrow Functions
+// Using Arrow Functions (Since PHP 7.4)
 Route::get('/page/{id}', fn ($id) => view('page', ['page' => $id]));
 ```
 
@@ -32,6 +32,10 @@ Route with an optional parameter
 Route::get('/hello/{name?}', function ($name = 'Guest') {
     return view('hello', ['name' => $name]);
 });
+
+// Using Arrow Functions (Since PHP 7.4)
+// For optional route parameter {name}, the Closure argument has to have a default value provided
+Route::get('/hello/{name?}', fn ($name = 'Guest') => view('hello', ['name' => $name]));
 ```
 
 Named route
