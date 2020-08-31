@@ -58,38 +58,52 @@ Defining a section
 ```
 Rendering a section
 
-`@yield('content')`
+```blade
+@yield('content')
+```
 
 Extending a layout
 
-`@extends('layout')`
+```blade
+@extends('layout')
+```
 
 Function to render a view
 
-`view('name', ['data' =>‚ 'value'])`
+```blade
+view('name', ['data' =>‚ 'value'])
+```
 
 Rendering data inside a Blade template
 
-`{{ $data }}`
+```blade
+{{ $data }}
+```
 
 *By default data is escaped using `htmlspecialchars`*
 
 Rendering unescaped data
 
-`{!! $data !!}`
+```blade
+{!! $data !!}
+```
 
 Including another view
 
-`@include('view.name')`
+```blade
+@include('view.name')
+```
 
 *Included view will inherit parent view data*
 
 Passing additional data to included view
 
-`@include('view.name', ['name' => 'John'])`
+```blade
+@include('view.name', ['name' => 'John'])
+```
 
 Generating a URL inside view
 
-```
+```blade
 <a href="{{ route('home') }}">Home</a>
 ```
