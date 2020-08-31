@@ -86,8 +86,8 @@ Of course you would never create controller classes yourself, Laravel handles th
 
 ### Routing
 
-Route for controller action
+The action function generates a URL for the given controller action
 
-```
+```php
 $url = action('HomeController@home');
 ```
