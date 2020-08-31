@@ -21,11 +21,11 @@ By default, Laravel runs tests in `testing` environment.
 
 If your tests involve database, you would not like to perform any changes on your local database.
 
-You might create a new MySQL database for testing, or use SQLite (preferably, in memory).
+You might create a new MySQL database for testing, or use SQLite (an in-memory version of it).
 
 To specify a different database connection for testing environment, add
 
-```
+```xml
 <env name="DB_CONNECTION" value="sqlite_testing" />
 ```
 
@@ -33,7 +33,7 @@ Inside the `phpunit.xml`.
 
 Then, configure the connection inside `config/database.php` file like below
 
-```
+```php
 'sqlite_testing' => [
     'driver' => 'sqlite',
     'database' => ':memory:'
@@ -47,7 +47,7 @@ Important, before running your tests for the first time, run
 
 `php artisan config:clear`
 
-To clear configuration cache. Read more about [configuration cache](https://laravel.com/docs/5.7/configuration#configuration-caching).
+To clear configuration cache. Read more about [configuration cache](https://laravel.com/docs/7.x/configuration#configuration-caching).
 
 #### Running tests
 
@@ -61,7 +61,7 @@ All your tests will extend the base class `TestCase` from `Tests` namespace.
 
 Here is an example `Unit` test
 
-```
+```php
 <?php
 
 namespace Tests\Unit;
@@ -91,7 +91,7 @@ To refresh database after each test (rebuild schema using migrations), add the `
 
 An example:
 
-```
+```php
 <?php
 
 namespace Tests\Feature;
@@ -117,15 +117,15 @@ class PostTest extends TestCase
 
 You can call your application using HTTP 
 
-```
+```php
 $response = $this->get('/posts');
 ```
 
 Then, you can perform some assertions on the result, like checking if certain text was displayed or if JSON with specific values was returned.
 
-```
+```php
 $response->assertSeeText('First post');
 ```
 
-Here is a list of all [possible assertions](https://laravel.com/docs/5.7/http-tests#available-assertions)
+Here is a list of all [possible assertions](https://laravel.com/docs/7.x/http-tests#available-assertions)
 
