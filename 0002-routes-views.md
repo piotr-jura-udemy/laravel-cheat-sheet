@@ -11,8 +11,8 @@ Route::get('/', function () {
 Defining a route that only renders a Blade template
 
 ```php
-Route::view('/home')
-Route::view('/home', ['data' => 'value'])
+Route::view('/home'); // Without parameters
+Route::view('/home', ['data' => 'value']); // With parameters
 ```
 
 Route with a required parameter
