@@ -44,11 +44,10 @@ Route::get('/hello/{name?}', function ($name = 'Guest') {
 Route::get('/hello/{name?}', fn ($name = 'Guest') => view('hello', ['name' => $name]));
 ```
 
-Named route
+Named route (to give the route a name, you would chain a `name()` method call)
 
 ```php
 Route::view('/home')->name('home');
-Route::get('/blog-post/{id}', function ($id) { return view('blog-post', ['id' => $id]); });
 ```
 
 Generating URI of the named route (generating links)
