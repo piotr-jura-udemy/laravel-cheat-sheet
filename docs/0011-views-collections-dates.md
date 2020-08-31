@@ -64,13 +64,13 @@ The @unless directive
 
 #### Date mutators
 
-[https://laravel.com/docs/5.3/eloquent-mutators#date-mutators](https://laravel.com/docs/5.3/eloquent-mutators#date-mutators)
+[https://laravel.com/docs/7.x/eloquent-mutators#date-mutators](https://laravel.com/docs/7.x/eloquent-mutators#date-mutators)
 
 By default the `created_at` and `updated_at` will be converted to Carbon date objects
 
 It can be configured using `dates` field of the model
 
-```blade
+```php
 class BlogPost extends Model
 {
     protected $dates = [
@@ -89,7 +89,7 @@ It can be customized using `dateFormat` field of the model.
 
 **Warning!** This will change how date is stored inside the database and how it is being formatted by default!
 
-```blade
+```php
 class BlogPost extends Model
 {
     protected $dateFormat = 'Y-m-d';
@@ -113,7 +113,7 @@ Checking for time difference (https://carbon.nesbot.com/docs/#api-difference)
 In the below example we check if the time passed between now, and the post created_at date is less than 5 minutes. Only then we render the "New!" badge.
 
 ```blade
-@unless ((new Carbon\Carbon())->diffInMinutes($post->created_at) < 5)
+@unless (now()->diffInMinutes($post->created_at) < 5)
     <strong>New!</strong>
 @endunless
 ```
