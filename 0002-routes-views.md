@@ -2,7 +2,7 @@
 
 Defining a route using closure
 
-```
+```php
 Route::get('/', function () {
     return view('welcome');
 });
