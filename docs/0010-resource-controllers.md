@@ -4,6 +4,7 @@ You can import the model class in your controller
 
 ```php
 use App\BlogPost
+
 // Now it can be used like this
 BlogPost::all();
 // Instead of 
