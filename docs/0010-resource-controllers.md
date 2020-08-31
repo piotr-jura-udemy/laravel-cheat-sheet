@@ -1,4 +1,4 @@
-### Resource Controllers
+## Resource controllers
 
 You can import the model class in your controller
 
@@ -11,7 +11,11 @@ BlogPost::all();
 \App\BlogPost::all();
 ```
 
-#### Resource Controllers
+### Resource controllers overview (diagram)
+
+![Routing diagram](./../resources/img/Laravel-Resource-Controller.png)
+
+### Resource controllers
 
 If you think about a single resource, like photo - resource controllers let you organize all controller logic around that resource easily
 
@@ -58,13 +62,13 @@ Route::resource('posts', 'PostController')->except(['create', 'store', 'edit', '
 
 *Both examples above will result in the same routes - posts.index and posts.show*
 
-#### Fetching a single model
+### Fetching a single model
 
 Model can be fetched using `BlogPost::find($id)`
 
 To display a 404 Not Found page when model cannot be found, use `BlogPost::findOrFail($id)`
 
-#### Route Model Binding
+### Route Model Binding
 
 Those 2 examples are equivalent
 
