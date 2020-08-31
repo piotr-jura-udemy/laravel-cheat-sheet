@@ -1,4 +1,4 @@
-### Controllers
+### Resource Controllers
 
 You can import the model class in your controller
 
