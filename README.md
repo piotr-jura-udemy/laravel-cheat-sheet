@@ -1,6 +1,6 @@
 # Laravel Cheat Sheet
 
-## Laravel basics (routes, controllers, views, forms, testing)
+## Laravel basics (routing, controllers, templates/views, forms, testing, assets)
 
 1. [Routes, Views and Layout](./docs/0002-routes-views.md)
 2. [Controllers](./docs/0004-controllers.md)
