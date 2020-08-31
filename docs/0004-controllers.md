@@ -10,7 +10,7 @@ Controllers are stored inside the `app/Http/Controllers` folder
 
 An example controller class
 
-```
+```php
 <?php
 
 namespace App\Http\Controllers;
@@ -35,7 +35,7 @@ Controllers do not have to extend the base `App\Http\Controllers\Controller` cla
 
 Route definition for the above controller (routes/web.php):
 
-```
+```php
 Route::get('/', 'HomeController@home');
 Route::get('/contact', 'HomeController@contact');
 
@@ -49,7 +49,7 @@ RouteServiceProvider will is responsible for prepending the `App\Http\Controller
 
 For controllers that handle just a single action:
 
-```
+```php
 <?php
 
 namespace App\Http\Controllers;
@@ -67,7 +67,7 @@ class HomeSingleController extends Controller
 
 Route definition (routes/web.php)
 
-```
+```php
 Route::get('home', 'HomeSingleController');
 ```
 
@@ -77,11 +77,12 @@ Generating a single action controller
 
 The `__invoke` is a magic PHP method that allows the object to be called like a function, eg.
 
-```
+```php
 $controller = new HomeSingleController();
 $controller();
-
 ```
+
+Of course you would never create controller classes yourself, Laravel handles that. This is just an example of how invokable object (object that can be called like it would be a function) in PHP looks like.
 
 ### Routing
 
